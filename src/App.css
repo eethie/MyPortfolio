@@ -5,53 +5,19 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #fcfcfcaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 .navbar {
   display: flex;
   gap: 20px;           
   padding: 10px 20px;
-  background-color: #f0f0f0;  
-  border-bottom: 1px solid #ccc;
 
-  position: sticky;  /* <-- stick to top */
-  top: 0;            /* <-- stick at top of viewport */
-  z-index: 1000;     /* <-- make sure it’s above other content */
+  position: fixed;  /* <-- stick to top */
+  top: 0;            /*top of viewport */
+  z-index: 1000;     /* above other content */
 }
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #ff0000;
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
@@ -62,17 +28,23 @@
   color: #fff;
 }
 
-.home {
-  padding: 40px;
-  text-align: center;
+
+
+.nav-icons {
+  margin-left: auto; 
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  size: 38px;
 }
 
-.home h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.nav-icons .icon{
+  color: #ff0000;
+  transition: color 0.3s;
 }
 
-.home p {
-  font-size: 1.2rem;
-  color: #555;
+.nav-icons .icon:hover{
+  transform: scale(1.5);
+  color: #ffffff;
+  transition: color 0.3s;
 }
