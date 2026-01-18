@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <header>
-        <nav className="navbar">
+        <nav className="nav-row">
           <div className="nav-links">
           <NavLink to="/" end className="nav-link">Home</NavLink>
           <NavLink to="/about" className="nav-link">About</NavLink>
@@ -32,6 +32,7 @@ function App() {
               <HiIdentification className="icon" />
             </a>
           </div>
+
         </nav>
       </header>
 

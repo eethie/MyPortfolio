@@ -1,50 +1,125 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.navbar {
-  display: flex;
-  gap: 20px;           
-  padding: 10px 20px;
+@font-face {
+  font-family: 'DaftFont';
+  src: url('./assets/fonts/DaftFont.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  position: fixed;  /* <-- stick to top */
-  top: 0;            /*top of viewport */
-  z-index: 1000;     /* above other content */
+header {
+  position: sticky; 
+  top: 0;    
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+
+.nav-row {
+  border-radius: 25px;
+  width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 0.75rem 2rem;
+  margin: 0 auto;
+  box-shadow: #E31C2D 10px 10px 30px -10px;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #ff0000;
+  color:#E31C2D;
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-link.active {
-  background-color: #333;
+  background-color: #E31C2D;
   color: #fff;
+  border-radius: 25px;
+
 }
 
-
-
 .nav-icons {
-  margin-left: auto; 
+  margin-left: auto;
   display: flex;
   gap: 15px;
   align-items: center;
-  size: 38px;
 }
 
-.nav-icons .icon{
-  color: #ff0000;
-  transition: color 0.3s;
+.nav-icons .icon {
+  color: #E31C2D;
+  transition: transform 0.2s, color 0.2s;
+  font-size: 1.5rem;
 }
 
 .nav-icons .icon:hover{
   transform: scale(1.5);
-  color: #ffffff;
-  transition: color 0.3s;
+  transform-origin:bottom center;
+}
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.home {
+  box-shadow: #E31C2D 10px 10px 30px -10px;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 25px;
+  padding: 2rem 3rem; 
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.intro-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #f5f5f5;
+  font-size: 1.2rem;
+}
+
+.welcome-header {
+  color: #E31C2D;
+  font-family: 'DaftFont', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.portrait {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
 }
