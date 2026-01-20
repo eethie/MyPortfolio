@@ -8,7 +8,7 @@ function Home() {
       </video>
     <div className="home">
       <div className="intro-text">
-        <div className = "welcome-header">
+        <div className = "header">
           <h1>WELCOME!</h1>
         </div>
       <p>Hi! I'm Ethan Zeng, an aspiring developer passionate about creating and exploring new technologies.This is my personal portfolio where I showcase my projects and share a bit about myself.</p>
