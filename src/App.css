@@ -145,14 +145,15 @@ header {
 }
 .hobbies-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  max-width: 1050px;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   width: 100%;
 
   box-shadow: #E31C2D 10px 10px 30px -10px;
-  background: rgba(18, 18, 18, 0.85);
+  background: rgba(18, 18, 18, 0.65);
   backdrop-filter: blur(6px);
   border-radius: 25px;
   padding: 2rem 2rem; 
@@ -171,6 +172,6 @@ header {
   align-items: center;
   gap: 3rem;
   min-height: 100vh;
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 
