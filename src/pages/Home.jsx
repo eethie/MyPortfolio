@@ -1,13 +1,16 @@
-import video from '../assets/daftpunkmv.mp4'
+import video from '../assets/aroundtheworld.mp4'
+import crowd from '../assets/background.png'
 
 function Home() {
   return (
     <div className ="home-container">
       <video autoPlay loop muted className="video">
         <source src={video} type="video/mp4" />
-      </video>
-      <div className="image-overlay"></div>
-    <div className="home">
+        </video>
+      <div className="crowd-container">
+        <img src={crowd} alt="crowd" className="crowd-image" />
+      </div>    
+      <div className="home">
       <div className="intro-text">
         <div className = "header">
           <h1>WELCOME!</h1>
