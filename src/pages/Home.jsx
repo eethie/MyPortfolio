@@ -6,6 +6,7 @@ function Home() {
       <video autoPlay loop muted className="video">
         <source src={video} type="video/mp4" />
       </video>
+      <div className="image-overlay"></div>
     <div className="home">
       <div className="intro-text">
         <div className = "header">

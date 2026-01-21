@@ -36,7 +36,7 @@ function About() {
       </div>
       <div className="hobbies-container">
           <div className="header">
-            <h3>Hobbies</h3>
+            <h3>outside of class</h3>
           </div>
         <div className = 'two-column'>
           <div className="hobbies-slider">
