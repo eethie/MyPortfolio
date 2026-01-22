@@ -11,7 +11,6 @@
   font-style: normal;
 }
 
-
 .nav-row {
   border-radius: 25px;
   width: fit-content;
@@ -63,7 +62,7 @@
   transform-origin:bottom center;
 }
 
-.home-container{
+.home-page{
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -94,12 +93,12 @@
   width: 100%;      /* full width of video */
   height: auto;     /* maintain aspect ratio */
   display: block;
-  transform: translateY(55%);
+  transform: translateY(34%);
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 38%);
 }
 
-.home {
+.home-container {
   box-shadow: #E31C2D 10px 10px 30px -10px;
   background: rgba(18, 18, 18, 0.65);
   backdrop-filter: blur(6px);
@@ -148,6 +147,8 @@ header {
   display:  flex;
   gap: 3rem;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 .about-container {
   display: flex;
@@ -161,6 +162,7 @@ header {
   border-radius: 25px;
   padding: 2rem 2rem; 
 }
+
 .hobbies-container {
   display: flex;
   flex-direction: column;
@@ -169,6 +171,7 @@ header {
   justify-content: center;
   gap: 2rem;
   width: 100%;
+  z-index: 2;
 
   box-shadow: #E31C2D 10px 10px 30px -10px;
   background: rgba(18, 18, 18, 0.65);
@@ -193,3 +196,22 @@ header {
   padding-top: 5rem;
 }
 
+.projects-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 6rem;
+  overflow: visible;
+}
+
+.projects-container {
+  box-shadow: #E31C2D 10px 10px 30px -10px;
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 25px;
+  padding: 2rem 3rem; 
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}

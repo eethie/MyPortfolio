@@ -1,5 +1,8 @@
+import video from '../assets/instantcrush.mp4'
+
 import portrait from '../assets/portrait.jpg'
 import Slider from '../components/slider/slider.jsx';
+import crowd from '../assets/background.png'
 
 import brothers from '../components/slider/people-images/brothers.jpg';
 import girlfriend from '../components/slider/people-images/girlfriend.jpg';
@@ -14,7 +17,14 @@ const images = [
 function About() {
   return (
     <div className="about-page">
-
+      <video autoPlay loop muted className="video">
+        <source src={video} type="video/mp4" />
+      </video>
+      <div className="crowd-container">
+        <img src={crowd} alt="crowd" className="crowd-image" />
+      </div> 
+      
+      
       <div className = "two-column">
         <div className="portrait-container">
           <img src={portrait} alt="Ethan Zeng Portrait" className="portrait" />

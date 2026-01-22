@@ -3,14 +3,14 @@ import crowd from '../assets/background.png'
 
 function Home() {
   return (
-    <div className ="home-container">
+    <div className ="home-page">
       <video autoPlay loop muted className="video">
         <source src={video} type="video/mp4" />
-        </video>
+      </video>
       <div className="crowd-container">
         <img src={crowd} alt="crowd" className="crowd-image" />
       </div>    
-      <div className="home">
+      <div className="home-container">
       <div className="intro-text">
         <div className = "header">
           <h1>WELCOME!</h1>
