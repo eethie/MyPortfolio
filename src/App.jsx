@@ -8,11 +8,13 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import resume from './assets/ez_resume.pdf'
 
+import ScrollToTop from './ScrollToTop'
 import './App.css' 
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <header>
         <nav className="nav-row">
           <div className="nav-links">
