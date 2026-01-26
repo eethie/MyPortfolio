@@ -8,6 +8,8 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import resume from './assets/ez_resume.pdf'
 
+import { motion } from "motion/react"
+
 import ScrollToTop from './ScrollToTop'
 import './App.css' 
 
@@ -16,7 +18,12 @@ function App() {
     <Router>
       <ScrollToTop />
       <header>
-        <nav className="nav-row">
+        <motion.nav 
+          className="nav-row"
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeOut", delay: 0.8 }}
+          >
           <div className="nav-links">
           <NavLink to="/" end className="nav-link">Home</NavLink>
           <NavLink to="/about" className="nav-link">About</NavLink>
@@ -35,7 +42,7 @@ function App() {
             </a>
           </div>
 
-        </nav>
+        </motion.nav>
       </header>
 
       <main>

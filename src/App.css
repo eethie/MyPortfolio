@@ -151,6 +151,9 @@ header {
   font-family: 'DaftFont', sans-serif;
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 1; 
 }
 
 .portrait {
@@ -160,11 +163,11 @@ header {
   object-fit: cover;
 }
 
-.two-column {
+.column {
+  flex-direction: row;
   display:  flex;
   gap: 3rem;
   align-items: flex-start;
-  position: relative;
   z-index: 2;
 }
 .about-container {
@@ -180,7 +183,7 @@ header {
   padding: 2rem 2rem; 
 }
 
-.hobbies-container {
+.outside-container {
   display: flex;
   flex-direction: column;
   max-width: 1050px;
@@ -214,12 +217,12 @@ header {
 }
 
 .projects-page {
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  min-height: 100vh;
   padding-top: 6rem;
-  overflow: visible;
 }
 
 .projects-container {
@@ -231,4 +234,38 @@ header {
   position: relative;
   z-index: 1;
   max-width: 700px;
+}
+
+.pngpal-project-card {
+  margin-top: 2rem;
+  box-shadow: #E31C2D 10px 10px 30px -10px;
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 25px;
+  padding: 2rem 3rem; 
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.project-card {
+  width: 350px;      /* pick what looks good */
+  height: 250px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: #E31C2D 10px 10px 30px -10px;
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 25px;
+  padding: 3rem 3rem; 
+  position: relative;
+  z-index: 1;
+}
+
+.project-card p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 }

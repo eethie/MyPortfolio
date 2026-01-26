@@ -8,6 +8,8 @@ import brothers from '../components/slider/people-images/brothers.jpg';
 import girlfriend from '../components/slider/people-images/girlfriend.jpg';
 import sister from '../components/slider/people-images/sister.jpg';
 
+import { motion } from "motion/react"
+
 const images = [
   { imgURL: brothers, imgAlt: 'brothers' },
   { imgURL: girlfriend, imgAlt: 'girlfriend' },
@@ -20,17 +22,32 @@ function About() {
       <video autoPlay loop muted className="video">
         <source src={video} type="video/mp4" />
       </video>
-      <div className="crowd-container">
+      <motion.div 
+      className="crowd-container"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 50, delay: 0.8 }}
+      >
         <img src={crowd} alt="crowd" className="crowd-image" />
-      </div> 
+      </motion.div> 
       
       
-      <div className = "two-column">
-        <div className="portrait-container">
+      <div className = "column">
+        <motion.div 
+        className="portrait-container"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", delay: 1 }}
+        >
           <img src={portrait} alt="Ethan Zeng Portrait" className="portrait" />
-        </div>
+        </motion.div>
 
-        <div className="about-container">
+        <motion.div 
+        className="about-container"
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", delay: 1.1 }}
+        >
           <div className="about-content">
             <div className="header">
               <h2>who am i?</h2>
@@ -42,21 +59,27 @@ function About() {
               AP courses, and from there I was hooked. Outside of coding, I enjoy playing video games and watching movies.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="hobbies-container">
+      <motion.div 
+      className="outside-container"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeOut", delay: 1.4 }}
+      
+      >
           <div className="header">
             <h3>outside of class</h3>
           </div>
-        <div className = 'two-column'>
-          <div className="hobbies-slider">
+        <div className = 'column'>
+          <div className="outside-slider">
             <Slider>
               {images.map((image, index) => {
               return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
               })}
             </Slider>
           </div>
-          <div className="hobbies-content">
+          <div className="outside-content">
             <p>
               Outside of coding, I enjoy spending time with my family and friends, 
               exploring the new places and trying out new things. Although when I'm not doing those, 
@@ -64,7 +87,7 @@ function About() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
