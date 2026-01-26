@@ -52,7 +52,6 @@ function Projects() {
             <p>TruthMeter is a browser extension that uses AI to analyze and fact-check online content in real time. 
               It helps users better evaluate the credibility of the information they consume by generating transparency-driven credibility scores and explanations for claims found on webpages. 
             </p>
-            <p></p>
           </motion.div>
 
           <motion.div 
@@ -94,14 +93,36 @@ function Projects() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
             >
+
               <h2>{activeProject}</h2>
+              
 
               {activeProject === "TruthMeter" && (
-                <p>Extended info about TruthMeter goes here.</p>
+                <>
+                <img src={logo} alt="TruthMeter Logo" className = "portrait"/>
+                <h4>Project Overview</h4>
+                TruthMeter is a browser extension that uses AI to analyze and fact-check online content in real time. 
+                It helps users better evaluate the credibility of the information they consume by generating transparency-driven credibility scores and explanations for claims found on webpages.
+                <h4>ShellHacks 2025</h4>
+                <p>Truthmeter is my first hackathon project as well as being on of my first project its design reflects that. 
+                  It is a simple browser extension that has minimal functionality.</p>
+                <h4>Technologies Used:</h4> 
+                <p>React, JavaScript, HTML, CSS, OpenAI API, Google ADK, Fast API</p>
+                </>
               )}
 
-              {activeProject === "PngPal" && (
-                <p>Extended info about PngPal goes here.</p>
+              {activeProject === "pngPal" && (
+                <>
+                <img src={logo2} alt="pngPal Logo" className = "portrait"/>
+                <h4>Project Overview</h4>
+                <p>pngPal is an interactive AI assistant designed to provide judgment-free financial consultation through a conversational interface. 
+              Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.</p>
+                <h4>KnightHacks 8, 2025</h4>
+                <p>pngPal is an interactive AI assistant designed to provide judgment-free financial consultation through a conversational interface. 
+                  Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.</p>
+                <h4>Technologies Used:</h4> 
+                <p></p>
+                </>
               )}
 
               {activeProject === "Portfolio" && (

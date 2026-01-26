@@ -281,7 +281,8 @@ header {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,9 +290,17 @@ header {
 }
 
 .modal-card {
-  background: #111;
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(6px);
+  outline: #E31C2D 2px solid;
+  margin-top: -7rem;
   padding: 2rem;
   border-radius: 20px;
   max-width: 600px;
   width: 90%;
+}
+.project-logo {
+  border-radius: 25px;
+  box-shadow: #E31C2D 5px 5px 15px -5px;
+  object-fit: cover;
 }
