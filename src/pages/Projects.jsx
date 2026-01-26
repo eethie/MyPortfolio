@@ -104,8 +104,10 @@ function Projects() {
                 TruthMeter is a browser extension that uses AI to analyze and fact-check online content in real time. 
                 It helps users better evaluate the credibility of the information they consume by generating transparency-driven credibility scores and explanations for claims found on webpages.
                 <h4>ShellHacks 2025</h4>
-                <p>Truthmeter is my first hackathon project as well as being on of my first project its design reflects that. 
-                  It is a simple browser extension that has minimal functionality.</p>
+                <p>TruthMeter is my first hackathon project and also one of my earliest software projects, and its design reflects my experience level at the time. 
+                  It is a simple browser extension with minimal functionality, but it served as an important introduction to building real-world applications under time constraints. 
+                  Through this project, I learned the basics of working with web development, structuring a small project, and collaborating in a hackathon environment. 
+                  While the project itself is limited, it represents a starting point in my growth as a developer and helped motivate me to continue improving my technical skills.</p>
                 <h4>Technologies Used:</h4> 
                 <p>React, JavaScript, HTML, CSS, OpenAI API, Google ADK, Fast API</p>
                 </>
