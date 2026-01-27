@@ -41,10 +41,9 @@ function Projects() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           >
-            
-            <div className='header'>
-              <div className = 'column'>
+            <div className = 'column'>      
               <img src={logo} alt="TruthMeter Logo" className="project-logo"/>
+            <div className='header'>
              <h3>TruthMeter</h3>
               </div>
             </div>
@@ -52,6 +51,11 @@ function Projects() {
             <p>TruthMeter is a browser extension that uses AI to analyze and fact-check online content in real time. 
               It helps users better evaluate the credibility of the information they consume by generating transparency-driven credibility scores and explanations for claims found on webpages. 
             </p>
+              <div className="tags">
+                <span className="tag">React</span>
+                <span className="tag">Google ADK</span>
+                <span className="tag">Python</span>
+              </div>
           </motion.div>
 
           <motion.div 
@@ -59,7 +63,6 @@ function Projects() {
           onClick={() => setActiveProject("pngPal")}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          
           >
             <div className = 'column'>
             <img src = {logo2} alt="pngPal Logo" className= "project-logo"/>
@@ -69,7 +72,13 @@ function Projects() {
             </div>
             <h4>(PngPal)</h4>
             <p>pngPal is an interactive AI assistant designed to provide judgment-free financial consultation through a conversational interface. 
-              Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.</p>
+              Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.
+            </p>
+              <div className="tags">
+                <span className="tag">React</span>
+                <span className="tag">ElevenLabs API</span>
+                <span className="tag">Python</span>
+              </div>
           </motion.div>
 
           <motion.div 
@@ -81,7 +90,11 @@ function Projects() {
               <h3>Personal Portfolio</h3>
             </div>
             <h4>(this website!)</h4>
-            <p>This is my personal portfolio website designed to showcase me, my projects, and soon my experience in a visually appealing way.</p>
+            <p>This is my personal portfolio website designed to showcase me, my projects, and soon my experience in a visually appealing way.
+            </p>
+              <div className="tags">
+                <span className="tag">React</span>
+              </div>
           </motion.div>
 
         </div>
@@ -93,6 +106,9 @@ function Projects() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
             >
+              <button className="modal-close" onClick={() => setActiveProject(null)}>
+                ×
+              </button>
 
               <h2>{activeProject}</h2>
               
@@ -105,11 +121,20 @@ function Projects() {
                 It helps users better evaluate the credibility of the information they consume by generating transparency-driven credibility scores and explanations for claims found on webpages.
                 <h4>ShellHacks 2025</h4>
                 <p>TruthMeter is my first hackathon project and also one of my earliest software projects, and its design reflects my experience level at the time. 
-                  It is a simple browser extension with minimal functionality, but it served as an important introduction to building real-world applications under time constraints. 
-                  Through this project, I learned the basics of working with web development, structuring a small project, and collaborating in a hackathon environment. 
+                  Due to to my intention submit at least a working project, it resulted in a simple browser extension design with minimal functionality. 
+                  Although simple, it served as an important introduction to building real-world applications under time constraints. 
+                  Through this project, I learned the basics of working with web development, structuring a small project, and collaborating in a team environment. 
                   While the project itself is limited, it represents a starting point in my growth as a developer and helped motivate me to continue improving my technical skills.</p>
                 <h4>Technologies Used:</h4> 
                 <p>React, JavaScript, HTML, CSS, OpenAI API, Google ADK, Fast API</p>
+                  <a
+                    href="https://devpost.com/software/TruthMeter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    Devpost
+                  </a>
                 </>
               )}
 
@@ -119,19 +144,41 @@ function Projects() {
                 <h4>Project Overview</h4>
                 <p>pngPal is an interactive AI assistant designed to provide judgment-free financial consultation through a conversational interface. 
               Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.</p>
-                <h4>KnightHacks 8, 2025</h4>
-                <p>pngPal is an interactive AI assistant designed to provide judgment-free financial consultation through a conversational interface. 
-                  Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.</p>
+                <h4>KnightHacks 8</h4>
+                <p>pngPal was my second hackathon project and with one less team mate and more experience I was thus a little more involved compared to the first.
+                  In this project, I focused on designing the text to speech and the frontend interface to create a unique and seemless user experience.
+                  Due to its unique voice interaction, I wanted to ensure at least the basic functionality was there to showcase the concept, so I prioritized building a smooth and engaging conversational flow through a minimized design.
+                  I also contributed to the backend logic to ensure smooth communication between the frontend and the AI models.
+                </p>
                 <h4>Technologies Used:</h4> 
-                <p></p>
+                <p>React, Typescript, HTML, CSS, Python, ElevenLabs API, Gemini AI</p>
+                  <a
+                    href="https://devpost.com/software/pngpal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    Devpost
+                  </a>
                 </>
               )}
 
               {activeProject === "Portfolio" && (
-                <p>Extended info about your portfolio goes here.</p>
+                <>
+                <p>You're viewing my portfolio project.
+                  Check out the repo if you're interested.
+                </p>
+                <a
+                    href="https://github.com/eethie/MyPortfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    Github
+                  </a>
+                </>
               )}
 
-              <button onClick={() => setActiveProject(null)}>Close</button>
             </motion.div>
           </div>
         )}
