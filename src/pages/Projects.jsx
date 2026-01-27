@@ -68,7 +68,11 @@ function Projects() {
         </div>
         <p>Here are some of the things I’ve built so far :)</p>
       </motion.div>
-
+        <motion.div
+          className="project-card-wrapper"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeOut", delay: 1 }}>
         <div className="column">
           <motion.div 
           className="project-card"
@@ -133,6 +137,7 @@ function Projects() {
           </motion.div>
 
         </div>
+        </motion.div>
       {activeProject && (
           <div className="modal-overlay" onClick={() => setActiveProject(null)}>
             <motion.div

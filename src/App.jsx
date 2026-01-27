@@ -1,6 +1,3 @@
-import { useEffect } from "react"
-import favicon from "./assets/favicon.png"
-
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import { FaSquareGithub } from "react-icons/fa6";
 import { AiOutlineLinkedin } from "react-icons/ai";
@@ -17,17 +14,6 @@ import ScrollToTop from './ScrollToTop'
 import './App.css' 
 
 function App() {
-    useEffect(() => {
-    let link = document.querySelector("link[rel~='icon']")
-
-    if (!link) {
-      link = document.createElement("link")
-      link.rel = "icon"
-      document.head.appendChild(link)
-    }
-
-    link.href = favicon
-  }, [])
   return (
     <Router>
       <ScrollToTop />
