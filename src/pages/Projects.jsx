@@ -21,7 +21,7 @@ function Projects() {
   
   const backY = useTransform(scrollY, y => -y * 0.1);    
   const middleY = useTransform(scrollY, y => -y * 0.4);  
-  const frontY = useTransform(scrollY, y => -y * 0.75); 
+  const frontY = useTransform(scrollY, y => -y * 0.9 ); 
   const [activeProject, setActiveProject] = useState(null)
 
   return (
@@ -33,7 +33,7 @@ function Projects() {
               <motion.div className="layer layer-back"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 50, delay: 0.4 }}
+                transition={{ type: "spring", stiffness: 90, delay: 0.4 }}
                 style={{ y: backY }}
               >
                 <img src={crowd1} alt="crowd" className="crowd-image" />
@@ -42,7 +42,7 @@ function Projects() {
             <motion.div className="layer layer-middle"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 50, delay: 0.6 }}
+                transition={{ type: "spring", stiffness: 90, delay: 0.5 }}
                 style={{ y: middleY }}
             >
                 <img src={crowd2} alt="crowd" className="crowd-image" />
@@ -51,7 +51,7 @@ function Projects() {
             <motion.div className="layer layer-front"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 50, delay: 0.8 }}
+                transition={{ type: "spring", stiffness: 90, delay: 0.6 }}
                 style={{ y: frontY }}
             >
                 <img src={crowd3} alt="crowd" className="crowd-image" />
@@ -73,14 +73,14 @@ function Projects() {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", delay: 1 }}>
-        <div className="column">
+        <div className="row-layout">
           <motion.div 
           className="project-card"
           onClick={() => setActiveProject("TruthMeter")}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           >
-            <div className = 'column'>      
+            <div className = 'row-layout'>      
               <img src={logo} alt="TruthMeter Logo" className="project-logo"/>
             <div className='header'>
              <h3>TruthMeter</h3>
@@ -103,7 +103,7 @@ function Projects() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           >
-            <div className = 'column'>
+            <div className = 'row-layout'>
             <img src = {logo2} alt="pngPal Logo" className= "project-logo"/>
             <div className='header'>
               <h3>PngPal</h3>
@@ -159,6 +159,7 @@ function Projects() {
                 <h4>Project Overview</h4>
                 TruthMeter is a browser extension that uses AI to analyze and fact-check online content in real time. 
                 It helps users better evaluate the credibility of the information they consume by generating transparency-driven credibility scores and explanations for claims found on webpages.
+                It does this by scraping the HTML of the current webpage and sends it to the backend where the AI can start sending it through it's agent environment to check its credibility.
                 <h4>ShellHacks 2025</h4>
                 <p>TruthMeter is my first hackathon project and also one of my earliest software projects, and its design reflects my experience level at the time. 
                   Due to to my intention submit at least a working project, it resulted in a simple browser extension design with minimal functionality. 
@@ -183,9 +184,10 @@ function Projects() {
                 <img src={logo2} alt="pngPal Logo" className = "portrait"/>
                 <h4>Project Overview</h4>
                 <p>pngPal is an interactive AI assistant designed to provide judgment-free financial consultation through a conversational interface. 
-              Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.</p>
+              Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.
+              It utilises react state hooks to change the software states between inactive, listening, and speaking dependent on user input.</p>
                 <h4>KnightHacks 8</h4>
-                <p>pngPal was my second hackathon project and with one less team mate and more experience I was thus a little more involved compared to the first.
+                <p>pngPal was my second hackathon project and with one less team mate and more experience I was a little more involved compared to the first.
                   In this project, I focused on designing the text to speech and the frontend interface to create a unique and seemless user experience.
                   Due to its unique voice interaction, I wanted to ensure at least the basic functionality was there to showcase the concept, so I prioritized building a smooth and engaging conversational flow through a minimized design.
                   I also contributed to the backend logic to ensure smooth communication between the frontend and the AI models.

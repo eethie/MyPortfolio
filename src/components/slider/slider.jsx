@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import './slider.css';
+import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from "react-icons/io";
+
 
 function CustomCarousel({ children }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -52,62 +54,61 @@ function CustomCarousel({ children }) {
     }
   };
 
-  return (
+return (
+  <div className="slider-wrapper">
+    <button
+      className="slider__btn-prev"
+      onClick={(e) => {
+        e.preventDefault();
+        slidePrev();
+      }}
+    >
+      {<IoMdArrowDropleftCircle size = {40} />}
+    </button>
+
     <div
       className="container__slider"
       onMouseEnter={AutoPlayStop}
       onMouseLeave={AutoPlayStart}
     >
-      {children.map((item, index) => {
-        return (
-          <div
-            className={"slider__item slider__item-active-" + (activeIndex + 1)}
-            key={index}
-          >
-            {item}
-          </div>
-        );
-      })}
+      {children.map((item, index) => (
+        <div
+          className={"slider__item slider__item-active-" + (activeIndex + 1)}
+          key={index}
+        >
+          {item}
+        </div>
+      ))}
 
       <div className="container__slider__links">
-        {children.map((item, index) => {
-          return (
-            <button
-              key={index}
-              className={
-                activeIndex === index
-                  ? "container__slider__links-small container__slider__links-small-active"
-                  : "container__slider__links-small"
-              }
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveIndex(index);
-              }}
-            ></button>
-          );
-        })}
+        {children.map((item, index) => (
+          <button
+            key={index}
+            className={
+              activeIndex === index
+                ? "container__slider__links-small container__slider__links-small-active"
+                : "container__slider__links-small"
+            }
+            onClick={(e) => {
+              e.preventDefault();
+              setActiveIndex(index);
+            }}
+          ></button>
+        ))}
       </div>
-
-      <button
-        className="slider__btn-next"
-        onClick={(e) => {
-          e.preventDefault();
-          slideNext();
-        }}
-      >
-        {">"}
-      </button>
-      <button
-        className="slider__btn-prev"
-        onClick={(e) => {
-          e.preventDefault();
-          slidePrev();
-        }}
-      >
-        {"<"}
-      </button>
     </div>
-  );
+
+    <button
+      className="slider__btn-next"
+      onClick={(e) => {
+        e.preventDefault();
+        slideNext();
+      }}
+    >
+      {<IoMdArrowDroprightCircle size = {40} />}
+    </button>
+  </div>
+);
 }
 
 export default CustomCarousel;

@@ -16,7 +16,7 @@ const scrollY = useMotionValue(0);
 
 const backY = useTransform(scrollY, y => -y * 0.1);    
 const middleY = useTransform(scrollY, y => -y * 0.4);  
-const frontY = useTransform(scrollY, y => -y * 0.75);   
+const frontY = useTransform(scrollY, y => -y * 0.9);   
   return (
     <div className ="home-page">
       <video autoPlay loop muted className="video">
@@ -27,7 +27,7 @@ const frontY = useTransform(scrollY, y => -y * 0.75);
         <motion.div className="layer layer-back"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, delay: 0.4 }}
+          transition={{ type: "spring", stiffness: 90, delay: 0.4 }}
           style={{ y: backY }}
         >
           <img src={crowd1} alt="crowd" className="crowd-image" />
@@ -36,7 +36,7 @@ const frontY = useTransform(scrollY, y => -y * 0.75);
       <motion.div className="layer layer-middle"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, delay: 0.6 }}
+          transition={{ type: "spring", stiffness: 90, delay: 0.5 }}
           style={{ y: middleY }}
       >
           <img src={crowd2} alt="crowd" className="crowd-image" />
@@ -45,7 +45,7 @@ const frontY = useTransform(scrollY, y => -y * 0.75);
       <motion.div className="layer layer-front"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, delay: 0.8 }}
+          transition={{ type: "spring", stiffness: 90, delay: 0.6 }}
           style={{ y: frontY }}
       >
           <img src={crowd3} alt="crowd" className="crowd-image" />

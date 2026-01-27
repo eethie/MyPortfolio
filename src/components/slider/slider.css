@@ -2,15 +2,19 @@
   position: relative;
   width: 100%;
   max-width: 600px;
-  height : 400px;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  height: 400px;
+  overflow: hidden; /* keep slide clipping */
+  border-radius: 25px;
   background: rgba(18, 18, 18, 0.65);
+  display: flex;
+  object-fit: cover;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center; /* vertical center buttons */
+  justify-content: center;
+  position: relative;
 }
 
 .container__slider > button {
@@ -24,16 +28,36 @@
 .container__slider > button:active {
   color: #E31C2D;
 }
-
+/* 1. Define the base movement logic */
+.slider__btn-prev,
 .slider__btn-next {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(125, 125, 125);
   position: absolute;
-  right: 0;
+  top: 50%;
+  transform: translateY(calc(-50% + var(--y-offset, 0px)));
+  transition: transform 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+/* 2. Define the offsets */
+.slider__btn-prev:hover,
+.slider__btn-next:hover {
+  --y-offset: -3px; 
+  color: whitesmoke;
 }
 
-.slider__btn-prev {
-  position: absolute;
-  left: 0;
+.slider__btn-prev:active,
+.slider__btn-next:active {
+  --y-offset: 1px;
 }
+
+/* 3. Position them without overwriting the transform */
+.slider__btn-prev { left: -65px; }
+.slider__btn-next { right: -65px; }
 
 .container__slider__links {
   position: absolute;
@@ -50,8 +74,8 @@
   border-radius: 50%;
   outline: none;
   border: 0;
-  background-color: white;
-  border: 1px solid grey;
+  background-color: rgb(58, 58, 58);
+  border: 1px solid rgb(0, 0, 0);
   transition: background-color 1s ease;
   margin: 0 2px;
 }
@@ -69,6 +93,7 @@
   height: auto;
   transform: translateX(0);
   transition: transform 1s ease;
+  
 }
 
 .slider__item-active-1 {
