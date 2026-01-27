@@ -1,13 +1,27 @@
 import { useState } from "react"
 
 import video from '../assets/robotrock.mp4'
-import crowd from '../assets/background.png'
 
 import logo from '../assets/truthmeter.png'
 import logo2 from '../assets/pngpal.png'
-import { motion } from "motion/react"
+import crowd1 from '../assets/background-light.png'
+import crowd2 from '../assets/background-grey.png'
+import crowd3 from '../assets/background-black.png'
+import { useEffect} from "react";
+import { motion, useMotionValue, useTransform } from "motion/react";
 
 function Projects() {
+  const scrollY = useMotionValue(0);
+  
+    useEffect(() => {
+    const handleScroll = () => scrollY.set(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []); 
+  
+  const backY = useTransform(scrollY, y => -y * 0.1);    
+  const middleY = useTransform(scrollY, y => -y * 0.4);  
+  const frontY = useTransform(scrollY, y => -y * 0.75); 
   const [activeProject, setActiveProject] = useState(null)
 
   return (
@@ -15,13 +29,34 @@ function Projects() {
       <video autoPlay loop muted className="video">
         <source src={video} type="video/mp4" />
       </video>
-      <motion.div className="crowd-container"
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 50, delay: 0.8 }}
-      >
-        <img src={crowd} alt="crowd" className="crowd-image" />
-      </motion.div> 
+      <div className = "crowd-parallax">
+              <motion.div className="layer layer-back"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 50, delay: 0.4 }}
+                style={{ y: backY }}
+              >
+                <img src={crowd1} alt="crowd" className="crowd-image" />
+            </motion.div> 
+      
+            <motion.div className="layer layer-middle"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 50, delay: 0.6 }}
+                style={{ y: middleY }}
+            >
+                <img src={crowd2} alt="crowd" className="crowd-image" />
+            </motion.div> 
+      
+            <motion.div className="layer layer-front"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 50, delay: 0.8 }}
+                style={{ y: frontY }}
+            >
+                <img src={crowd3} alt="crowd" className="crowd-image" />
+            </motion.div> 
+            </div>   
       <motion.div 
       className="projects-container"
       initial = {{ y: -100, opacity: 0}}
