@@ -9,7 +9,13 @@
   display: flex;
   object-fit: cover;
 }
-
+@media (max-width: 768px) {
+  .container__slider {
+    object-fit: cover;
+    max-width: 80%;
+    height: 10%;
+  }
+}
 .slider-wrapper {
   display: flex;
   align-items: center; /* vertical center buttons */
@@ -58,6 +64,18 @@
 /* 3. Position them without overwriting the transform */
 .slider__btn-prev { left: -65px; }
 .slider__btn-next { right: -65px; }
+
+@media (max-width: 768px) {
+  .slider__btn-prev {
+   left: -14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider__btn-next {
+   right: -14px;
+  }
+}
 
 .container__slider__links {
   position: absolute;

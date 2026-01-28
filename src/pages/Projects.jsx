@@ -4,6 +4,7 @@ import video from '../assets/robotrock.mp4'
 
 import logo from '../assets/truthmeter.png'
 import logo2 from '../assets/pngpal.png'
+import logo3 from '../assets/pportrait.png'
 import crowd1 from '../assets/background-light.png'
 import crowd2 from '../assets/background-grey.png'
 import crowd3 from '../assets/background-black.png'
@@ -57,31 +58,34 @@ function Projects() {
             >
                 <img src={crowd3} alt="crowd" className="crowd-image" />
             </motion.div> 
-            </div>   
+        </div>   
       <motion.div 
       className="projects-container"
       initial = {{ y: -100, opacity: 0}}
       animate = {{ y:0, opacity: 1}}
-      transition = {{ ease: "easeOut", delay: 1.1}}
+      transition = {{ ease: "easeOut", delay: .8}}
       >
         <div className="header">
           <h2>Projects</h2>
         </div>
         <p>Here are some of the things I’ve built so far :)</p>
       </motion.div>
+
         <motion.div
           className="project-card-wrapper"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ ease: "easeOut", delay: 1 }}>
-        <div className="row-layout">
+          transition={{ ease: "easeOut", delay: 1 }}
+        >
+          
+        <div className="row-layout-item">
           <motion.div 
           className="project-card"
           onClick={() => setActiveProject("TruthMeter")}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           >
-            <div className = 'row-layout'>      
+            <div className = 'row-layout-text'>      
               <img src={logo} alt="TruthMeter Logo" className="project-logo"/>
             <div className='header'>
              <h3>TruthMeter</h3>
@@ -104,7 +108,7 @@ function Projects() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           >
-            <div className = 'row-layout'>
+            <div className = 'row-layout-text'>
             <img src = {logo2} alt="pngPal Logo" className= "project-logo"/>
             <div className='header'>
               <h3>PngPal</h3>
@@ -126,9 +130,13 @@ function Projects() {
           onClick={() => setActiveProject("Portfolio")}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}>
+          <div className='row-layout-text'>
+            <img src = {logo3} alt="portrait logo" className = "project-logo"/>
             <div className='header'>
               <h3>Personal Portfolio</h3>
             </div>
+          </div>
+            
             <h4>(this website!)</h4>
             <p>This is my personal portfolio website designed to showcase me, my projects, and soon my experience in a visually appealing way.
             </p>

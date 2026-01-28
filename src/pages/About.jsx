@@ -89,7 +89,7 @@ function About() {
                 <img src={crowd3} alt="crowd" className="crowd-image" />
             </motion.div> 
         </div>   
-      <div className = "row-layout">
+      <div className = "row-layout-item">
         <motion.div 
         className="portrait-container"
         initial={{ x: -100, opacity: 0 }}
