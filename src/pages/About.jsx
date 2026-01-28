@@ -57,7 +57,8 @@ function About() {
   //
   return (
     <div className="about-page">
-      <video autoPlay loop muted playsinline className="video">
+      <video autoPlay loop muted playsinline webkit-playsinline preload="auto"
+        class="video"className="video">
         <source src={video} type="video/mp4" />
       </video>
       <div className = "crowd-parallax">
