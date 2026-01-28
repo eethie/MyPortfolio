@@ -26,7 +26,7 @@ function Projects() {
 
   return (
     <div className='projects-page'>
-      <video autoPlay loop muted playsinline webkit-playsinline
+      <video autoPlay loop muted playsInline 
       preload="auto" class="video" className="video">
         <source src={video} type="video/mp4" />
       </video>

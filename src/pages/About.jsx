@@ -57,7 +57,7 @@ function About() {
   //
   return (
     <div className="about-page">
-      <video autoPlay loop muted playsinline webkit-playsinline preload="auto"
+      <video autoPlay loop muted playsInLine preload="auto"
         class="video"className="video">
         <source src={video} type="video/mp4" />
       </video>
