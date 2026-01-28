@@ -361,8 +361,18 @@ header {
   outline: #E31C2D 2px solid;
   padding: 2rem;
   border-radius: 20px;
-  max-width: 600px;
+  max-width: 25%;
+  width: 25%;
+  max-height: 80%;
+  height: auto;
   width: 90%;
+  overflow-y: auto;
+}
+
+.modal-card h4, h2{
+  font: bold;
+  font-size: 2rem;
+  color: #E31C2D;
 }
 
 .modal-close {

@@ -1,4 +1,4 @@
-import video from '../assets/instantcrush.mp4'
+import video from '../assets/loseyourself.mp4'
 
 import portrait from '../assets/portrait.jpg'
 import Slider from '../components/slider/slider.jsx'
