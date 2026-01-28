@@ -19,7 +19,7 @@ const middleY = useTransform(scrollY, y => -y * 0.4);
 const frontY = useTransform(scrollY, y => -y * 0.9);   
   return (
     <div className ="home-page">
-      <video autoPlay loop muted className="video">
+      <video autoPlay loop muted playsinline className="video">
         <source src={video} type="video/mp4" />
       </video>
 
