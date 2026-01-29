@@ -77,7 +77,7 @@ function Projects() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", delay: 1 }}
         >
-          
+
         <div className="row-layout-item">
           <motion.div 
           className="project-card"
@@ -91,7 +91,6 @@ function Projects() {
              <h3>TruthMeter</h3>
               </div>
             </div>
-            <h4>(TruthMeter)</h4>
             <p>TruthMeter is a browser extension that uses AI to analyze and fact-check online content in real time. 
               It helps users better evaluate the credibility of the information they consume by generating transparency-driven credibility scores and explanations for claims found on webpages. 
             </p>
@@ -114,7 +113,6 @@ function Projects() {
               <h3>PngPal</h3>
             </div>
             </div>
-            <h4>(PngPal)</h4>
             <p>pngPal is an interactive AI assistant designed to provide judgment-free financial consultation through a conversational interface. 
               Built during Knight Hacks VIII, this project blends engaging voice interaction with specialized AI reasoning to help users ask and explore financial questions with confidence.
             </p>
@@ -137,7 +135,6 @@ function Projects() {
             </div>
           </div>
             
-            <h4>(this website!)</h4>
             <p>This is my personal portfolio website designed to showcase me, my projects, and soon my experience in a visually appealing way.
             </p>
               <div className="tags">

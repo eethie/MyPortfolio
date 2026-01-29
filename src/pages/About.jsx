@@ -12,6 +12,10 @@ import fishing2 from '../components/slider/about-images/fishing2.jpg';
 import kh from '../components/slider/about-images/kh8.jpg';
 import shell from '../components/slider/about-images/shellhacks.jpg';
 import fam from '../components/slider/about-images/family.jpg'
+import fam2 from '../components/slider/about-images/family2.jpg'
+import fam3 from '../components/slider/about-images/family3.jpg'
+import fam4 from '../components/slider/about-images/family4.jpg'
+import fam5 from '../components/slider/about-images/family5.jpg'
 
 
 import crowd1 from '../assets/background-light.png'
@@ -36,6 +40,10 @@ const me = [
 
 const family = [
   { imgURL: fam, imgAlt: 'fam' },
+  { imgURL: fam2, imgAlt: 'fam2' },
+  { imgURL: fam3, imgAlt: 'fam3' },
+  { imgURL: fam4, imgAlt: 'fam4' },
+  { imgURL: fam5, imgAlt: 'fam5' },
   { imgURL: brothers, imgAlt: 'brothers' },
   { imgURL: brothers2, imgAlt: 'brothers2' },
   { imgURL: sister, imgAlt: 'sister' },
@@ -111,9 +119,9 @@ function About() {
             </div>
             <p>
               I am an Asian American of Chinese/Korean descent, where I grew up in Florida for most of my life.
-              Before my studies in Computer Science at the University of Florida, I always had an interesting in computers    
-              and coding. This stems from my ongoing interesting in video games and my father worked as a software engineer. 
-              This interest eventually led me to take my highschool's computer science
+              Before my studies in Computer Science at the University of Florida, I always had an interest in computers    
+              and coding. This stems from my ongoing interest in video games and my father worked as a software engineer. 
+              This interest eventually led me to take my high school's computer science
               AP courses, and from there I was hooked.
             </p>
           </div>
@@ -138,8 +146,8 @@ function About() {
           <div className="outside-content">
             <p>
               This is my family, and as you can see, it’s quite large. 
-              Growing up with as a family of 8 has shaped the person I am today, teaching me responsibility, resilience, and, of course, no shortage of humility. 
-              I am grateful for their endless support, as without them, I don’t know how I could’ve navigated through life and pursue my passions. 
+              Growing up as part of a family of eight has shaped the person I am today, teaching me responsibility, resilience, and, of course, a healthy dose of humility. 
+              I am grateful for their endless support, as without them, I don’t know how I could’ve navigated through life and pursued my passions. 
             </p>
           </div>
       </motion.div>
@@ -157,9 +165,9 @@ function About() {
           </div>
         <div className="outside-content">
             <p>
-              Outside of computer science, I enjoy spending time with my family and friends, exploring new places, and trying out new experience.
-              I love finding new spots to eat and hang out with girlfriend.
-              When I'm not out and about I still exercise my passion of video games but additionally movies and creating new things.
+              Outside of computer science, I enjoy spending time with my family and friends, exploring new places, and trying out new experiences.
+              I love finding new spots to eat and hang out with my girlfriend.
+              When I'm not out and about, I still exercise my passion for video games, as well as movies and creating new things.
               I’m grateful to be able to experience and appreciate these joys. 
             </p>
           </div>
@@ -180,7 +188,7 @@ function About() {
             <p>
             KnightHacks is a club at UCF that I’m truly grateful to be a part of. 
             At a school as large as UCF, it can be challenging to meet and connect with like-minded people, but KnightHacks creates a space where creativity, collaboration, and learning thrive. 
-            The members are incredible, they nurture such an encouraging environment that inspires me to push my limits, explore new ideas, and build projects I never would have thought otherwise. 
+            The members are incredible; they nurture such an encouraging environment that inspires me to push my limits, explore new ideas, and build projects I never would have thought of otherwise. 
             I’m excited to continue growing with this community and contributing to the amazing projects and experiences we create together.
             </p>
           </div>

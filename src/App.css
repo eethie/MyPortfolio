@@ -28,10 +28,9 @@
   box-shadow: #E31C2D 10px 10px 30px -10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-row {
-    width: 90%;       /* fills most of screen */
-    max-width: 80%;  /* prevent overflow */
+    max-width: auto;  /* prevent overflow */
     padding: 0.75rem 1rem; /* reduce padding for small screens */
   }
 }
@@ -45,7 +44,7 @@
   display: inline-block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-link {
     padding: 5px;
     font-size: .8rem;
@@ -77,7 +76,6 @@
 }
 
 .nav-icons {
-  margin-left: auto;
   display: flex;
   gap: 15px;
   align-items: center;
@@ -118,7 +116,7 @@
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .video {
     height: 90%;
   }
@@ -185,7 +183,7 @@
   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%);
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .crowd-parallax {
     height: 84vh;       /* smaller but visible */
   }
@@ -222,7 +220,7 @@
   max-width: 700px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .home-container {
     width: 55%;
     flex-direction: column;
@@ -240,7 +238,7 @@
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
   .intro-text {
   gap: .5rem;
   font-size: 1rem;
@@ -264,27 +262,34 @@ header {
   font-weight: bold;
   margin-bottom: 0;
   padding-bottom: 0;
-  line-height: 1; 
+  line-height: 1;
+  margin-top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .header {
     font-size: 1rem;
   }
 }
 
-.portrait {
-  width: 380px;
-  height: 360px;
-  border-radius: 25px;
-  object-fit: cover;
+.portrait-container {
+  max-width: 300px;   /* max size it can grow to */
+  width: 100%;        /* fills parent container */
+  margin: 0 auto;     /* centers it */
 }
 
-@media(max-width:768px){
+/* Portrait image itself */
+.portrait {
+  width: 100%;        /* scales with container */
+  height: auto;       /* preserves aspect ratio */
+  border-radius: 10%; /* makes it circular, optional */
+  object-fit: cover;  /* fills container nicely if aspect changes */
+}
+
+@media(max-width:1024px){
   .portrait{
     max-width: 80%;
-    border-radius: 50px;
-    width: 90%;
+    width: 100%;
     height: 30%;
   }
 }
@@ -298,7 +303,7 @@ header {
   max-width: 70%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .row-layout-item {
     flex-direction: column;
     align-items: center;
@@ -306,17 +311,23 @@ header {
 }
 
 .row-layout-text {
+  padding: 1rem;
   flex-direction: row;
   display:  flex;
-  gap: 3rem;
-  align-items: flex-start;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  height: 7rem;
 }
 
-@media (max-width: 768px) {
-  .row-layout-item {
+@media (max-width: 1024px) {
+  .row-layout-text {
     flex-direction: column;
     align-items: center;
+    gap: 0rem;
   }
 }
 .about-container {
@@ -332,7 +343,7 @@ header {
   padding: 2rem 2rem; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-container {
     width: 90%;
     max-width: 90%;
@@ -346,7 +357,7 @@ header {
   max-width: 800px;     
   margin: 0 auto;    
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .outside-content p{
     font-size: 1rem;   
   }
@@ -367,25 +378,28 @@ header {
   padding: 2rem 2rem; 
   margin-bottom: 2rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .outside-container {
     width: 70%;
     max-width: 90%;
     padding: 1rem 1rem;  /* shrink padding */
     margin: 0 auto;
+    margin-bottom: 1rem;
   }
 }
 
 .about-content {
+  height: 382px;
   max-width: 600px;
   text-align: left;
   color: #f5f5f5;
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-content {
-    font-size: .8rem;
+    font-size: 1rem;
+    height: 50%;
   }
 }
 
@@ -429,7 +443,7 @@ header {
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .projects-container {
     width: 70%;
     max-width: 90%;
@@ -454,7 +468,7 @@ header {
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .project-card {
     max-width: 100%;    
     padding: 1.5rem;           
@@ -472,9 +486,9 @@ header {
   -webkit-box-orient: vertical;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .project-card p {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 
@@ -512,7 +526,7 @@ header {
   overflow-y: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .modal-card {
     max-width: 60%;
   }
@@ -555,8 +569,8 @@ header {
   bottom: 0;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 0.5rem 0 1rem;
-  justify-content: center;
+  justify-content: start;
+  margin-top: auto;
 }
 
 
