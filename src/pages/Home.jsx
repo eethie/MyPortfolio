@@ -15,8 +15,8 @@ const scrollY = useMotionValue(0);
 }, []); 
 
 const backY = useTransform(scrollY, y => -y * 0.1);    
-const middleY = useTransform(scrollY, y => -y * 0.4);  
-const frontY = useTransform(scrollY, y => -y * 0.9);   
+const middleY = useTransform(scrollY, y => -y * 0.2);  
+const frontY = useTransform(scrollY, y => -y * 0.4);   
   return (
     <div className ="home-page">
       <video autoPlay loop muted playsInline

@@ -21,6 +21,8 @@ import fam5 from '../components/slider/about-images/family5.jpg'
 import crowd1 from '../assets/background-light.png'
 import crowd2 from '../assets/background-grey.png'
 import crowd3 from '../assets/background-black.png'
+import extension from '../assets/extension.png'
+
 import { useEffect} from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
 
@@ -60,8 +62,8 @@ function About() {
   }, []); 
   
   const backY = useTransform(scrollY, y => -y * 0.1);    
-  const middleY = useTransform(scrollY, y => -y * 0.4);  
-  const frontY = useTransform(scrollY, y => -y * 0.9); 
+  const middleY = useTransform(scrollY, y => -y * 0.2);  
+  const frontY = useTransform(scrollY, y => -y * 0.4); 
   //
   return (
     <div className="about-page">
@@ -96,7 +98,8 @@ function About() {
             >
                 <img src={crowd3} alt="crowd" className="crowd-image" />
             </motion.div> 
-        </div>   
+
+          </div>   
       <div className = "row-layout-item">
         <motion.div 
         className="portrait-container"

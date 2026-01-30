@@ -21,8 +21,8 @@ function Projects() {
   }, []); 
   
   const backY = useTransform(scrollY, y => -y * 0.1);    
-  const middleY = useTransform(scrollY, y => -y * 0.4);  
-  const frontY = useTransform(scrollY, y => -y * 0.9 ); 
+  const middleY = useTransform(scrollY, y => -y * 0.2);  
+  const frontY = useTransform(scrollY, y => -y * 0.4); 
   const [activeProject, setActiveProject] = useState(null)
 
   return (
@@ -133,8 +133,7 @@ function Projects() {
             <div className='header'>
               <h3>Personal Portfolio</h3>
             </div>
-          </div>
-            
+            </div>
             <p>This is my personal portfolio website designed to showcase me, my projects, and soon my experience in a visually appealing way.
             </p>
               <div className="tags">

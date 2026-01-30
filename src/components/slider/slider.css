@@ -67,15 +67,28 @@
 
 @media (max-width: 768px) {
   .slider__btn-prev {
-   left: -14px;
+   left: 6px;
   }
 }
 
 @media (max-width: 768px) {
   .slider__btn-next {
-   right: -14px;
+   right: 6px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slider__btn-prev {
+   left: -46px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slider__btn-next {
+   right: -46px;
+  }
+}
+
 
 .container__slider__links {
   position: absolute;
