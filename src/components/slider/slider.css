@@ -65,25 +65,37 @@
 .slider__btn-prev { left: -65px; }
 .slider__btn-next { right: -65px; }
 
-@media (max-width: 768px) {
+@media (max-width: 499px) {
+  .slider__btn-prev {
+   left: -9px;
+  }
+}
+
+@media (max-width: 499px) {
+  .slider__btn-next {
+   right: -9px;
+  }
+}
+
+@media (min-width:500px) and (max-width: 768px) {
   .slider__btn-prev {
    left: 6px;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 768px) {
   .slider__btn-next {
    right: 6px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .slider__btn-prev {
    left: -46px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .slider__btn-next {
    right: -46px;
   }

@@ -78,7 +78,7 @@ function Projects() {
           transition={{ ease: "easeOut", delay: 1 }}
         >
 
-        <div className="row-layout-item">
+        <div className="row-layout-projects">
           <motion.div 
           className="project-card"
           onClick={() => setActiveProject("TruthMeter")}
