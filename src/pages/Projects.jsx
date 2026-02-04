@@ -9,6 +9,8 @@ import crowd1 from '../assets/background-light.png'
 import crowd2 from '../assets/background-grey.png'
 import crowd3 from '../assets/background-black.png'
 import { useEffect} from "react";
+
+// eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue, useTransform } from "motion/react";
 
 function Projects() {
@@ -18,7 +20,7 @@ function Projects() {
     const handleScroll = () => scrollY.set(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); 
+  }, [scrollY]); 
   
   const backY = useTransform(scrollY, y => -y * 0.1);    
   const middleY = useTransform(scrollY, y => -y * 0.2);  

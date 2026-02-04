@@ -3,6 +3,7 @@ import crowd1 from '../assets/background-light.png'
 import crowd2 from '../assets/background-grey.png'
 import crowd3 from '../assets/background-black.png'
 import { useEffect} from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue, useTransform } from "motion/react";
 
 function Home() {
@@ -12,7 +13,7 @@ const scrollY = useMotionValue(0);
   const handleScroll = () => scrollY.set(window.scrollY);
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
-}, []); 
+}, [scrollY]); 
 
 const backY = useTransform(scrollY, y => -y * 0.1);    
 const middleY = useTransform(scrollY, y => -y * 0.2);  
@@ -63,7 +64,7 @@ const frontY = useTransform(scrollY, y => -y * 0.4);
         <div className = "header">
           <h1>WELCOME!</h1>
         </div>
-      <p>Hi! I'm Ethan Zeng, an aspiring developer passionate about creating and exploring new technologies.This is my personal portfolio where I showcase my projects and share a bit about myself.</p>
+      <p>Hi! I'm Ethan Zeng, an aspiring developer interested in making full stack applications. This is my personal portfolio where I showcase my projects and share a bit about myself.</p>
       <p>I am still relatively new to all this but I'm excited to present my journey thus far. Feel free to explore my projects and learn more about me!</p>
     </div>
   </motion.div>

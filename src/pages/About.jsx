@@ -23,6 +23,7 @@ import crowd2 from '../assets/background-grey.png'
 import crowd3 from '../assets/background-black.png'
 
 import { useEffect} from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue, useTransform } from "motion/react";
 
 const knighthacks = [
@@ -58,7 +59,7 @@ function About() {
     const handleScroll = () => scrollY.set(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); 
+  }, [scrollY]); 
   
   const backY = useTransform(scrollY, y => -y * 0.1);    
   const middleY = useTransform(scrollY, y => -y * 0.2);  
@@ -121,7 +122,7 @@ function About() {
             </div>
             <p>
               I am an Asian American of Chinese/Korean descent, where I grew up in Florida for most of my life.
-              Before my studies in Computer Science at the University of Florida, I always had an interest in computers    
+              Before my studies in Computer Science at the University of Central Florida, I always had an interest in computers    
               and coding. This stems from my ongoing interest in video games and my father worked as a software engineer. 
               This interest eventually led me to take my high school's computer science
               AP courses, and from there I was hooked.

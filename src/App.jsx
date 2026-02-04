@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import { FaSquareGithub } from "react-icons/fa6";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { HiIdentification } from "react-icons/hi2";
@@ -8,7 +8,8 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import resume from './assets/ez_resume.pdf'
 
-import { motion } from "motion/react"
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion"
 
 import ScrollToTop from './ScrollToTop'
 import './App.css' 
@@ -31,13 +32,13 @@ function App() {
           </div>
 
           <div className="nav-icons">
-            <a href="https://github.com/eethie">
+            <a href="https://github.com/eethie" target="_blank" rel="noopener noreferrer">
               <FaSquareGithub className="icon" />
             </a>
-            <a href="https://www.linkedin.com/in/ethanzzeng/">
+            <a href="https://www.linkedin.com/in/ethanzzeng/" target="_blank" rel="noopener noreferrer">
               <AiOutlineLinkedin className="icon" />
             </a>
-            <a href={resume} download="ez_resume.pdf">
+            <a href={resume} download="ez_resume.pdf" target="_blank" rel="noopener noreferrer">
               <HiIdentification className="icon" />
             </a>
           </div>
