@@ -130,6 +130,7 @@ function About() {
           </div>
         </motion.div>
       </div>
+
       <motion.div 
       className="outside-container"
       initial={{ y: 100, opacity: 0 }}
@@ -155,7 +156,12 @@ function About() {
           </div>
       </motion.div>
 
-      <div className ="outside-container">
+      <motion.div 
+      className="outside-container"
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeOut", delay: 1.4 }}
+      >
           <div className='header'>
             <h3> Outside of school </h3>
           </div>
@@ -174,7 +180,8 @@ function About() {
               I’m grateful to be able to experience and appreciate these joys. 
             </p>
           </div>
-      </div>
+      </motion.div>
+
 
       <div className ="outside-container">
           <div className='header'>
