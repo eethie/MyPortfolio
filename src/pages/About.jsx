@@ -8,7 +8,6 @@ import girlfriend from '../components/slider/about-images/girlfriend.jpg';
 import girlfriend2 from '../components/slider/about-images/girlfriend2.jpg';
 import sister from '../components/slider/about-images/sister.jpg';
 import fishing from '../components/slider/about-images/fishing.jpg';
-import fishing2 from '../components/slider/about-images/fishing2.jpg';
 import kh from '../components/slider/about-images/kh8.jpg';
 import shell from '../components/slider/about-images/shellhacks.jpg';
 import fam from '../components/slider/about-images/family.jpg'
@@ -35,9 +34,7 @@ const knighthacks = [
 const me = [
   { imgURL: girlfriend, imgAlt: 'girlfriend' },
   { imgURL: girlfriend2, imgAlt: 'girlfriend2' },
-  { imgURL: fishing, imgAlt: 'fishing' },
-  { imgURL: fishing2, imgAlt: 'fishing2' },
-
+  { imgURL: fishing, imgAlt: 'fishing' }
 ];
 
 const family = [
@@ -122,8 +119,8 @@ function About() {
             </div>
             <p>
               I am an Asian American of Chinese/Korean descent, where I grew up in Florida for most of my life.
-              Before my studies in Computer Science at the University of Central Florida, I always had an interest in computers    
-              and coding. This stems from my ongoing interest in video games and my father worked as a software engineer. 
+              Before my studies in Computer Science at the University of Central Florida, I have always held an interest in computers    
+              and coding. I would say this stems from my interest in video games and computer hardware. My father worked as a software engineer and often encouraged my interests as well. 
               This interest eventually led me to take my high school's computer science
               AP courses, and from there I was hooked.
             </p>
@@ -175,9 +172,9 @@ function About() {
         <div className="outside-content">
             <p>
               Outside of computer science, I enjoy spending time with my family and friends, exploring new places, and trying out new experiences.
-              I love finding new spots to eat and hang out with my girlfriend.
+              I love finding new spots to eat and hanging out with my girlfriend.
               When I'm not out and about, I still exercise my passion for video games, as well as movies and creating new things.
-              I’m grateful to be able to experience and appreciate these joys. 
+              I’m grateful to be able to experience and appreciate these joys everyday. 
             </p>
           </div>
       </motion.div>
