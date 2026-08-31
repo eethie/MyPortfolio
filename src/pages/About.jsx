@@ -1,4 +1,4 @@
-import video from '../assets/loseyourself.mp4'
+import video from '../assets/loseyourself.webm'
 
 import portrait from '../assets/portrait.jpg'
 import Slider from '../components/slider/slider.jsx'
@@ -66,7 +66,7 @@ function About() {
     <div className="about-page">
       <video autoPlay loop muted playsInline preload="auto"
         class="video"className="video">
-        <source src={video} type="video/mp4" />
+        <source src={video} type="video/webm" />
       </video>
       <div className = "crowd-parallax">
               <motion.div className="layer layer-back"

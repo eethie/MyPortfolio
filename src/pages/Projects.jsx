@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import video from '../assets/robotrock.mp4'
+import video from '../assets/robotrock.webm'
 
 import logo from '../assets/truthmeter.png'
 import logo2 from '../assets/pngpal.png'
@@ -31,7 +31,7 @@ function Projects() {
     <div className='projects-page'>
       <video autoPlay loop muted playsInline 
       preload="auto" class="video" className="video">
-        <source src={video} type="video/mp4" />
+        <source src={video} type="video/webm" />
       </video>
       <div className = "crowd-parallax">
               <motion.div className="layer layer-back"

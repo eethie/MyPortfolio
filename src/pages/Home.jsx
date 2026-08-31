@@ -1,4 +1,4 @@
-import video from '../assets/aroundtheworld.mp4'
+import video from '../assets/aroundtheworld.webm'
 import crowd1 from '../assets/background-light.png'
 import crowd2 from '../assets/background-grey.png'
 import crowd3 from '../assets/background-black.png'
@@ -22,7 +22,7 @@ const frontY = useTransform(scrollY, y => -y * 0.4);
     <div className ="home-page">
       <video autoPlay loop muted playsInline
       preload="auto" class="video"className="video">
-        <source src={video} type="video/mp4" />
+        <source src={video} type="video/webm" />
       </video>
 
       <div className = "crowd-parallax">

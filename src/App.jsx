@@ -38,7 +38,7 @@ function App() {
             <a href="https://www.linkedin.com/in/ethanzzeng/" target="_blank" rel="noopener noreferrer">
               <AiOutlineLinkedin className="icon" />
             </a>
-            <a href={resume} download="ez_resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={resume} target="_blank" rel="noopener noreferrer">
               <HiIdentification className="icon" />
             </a>
           </div>
