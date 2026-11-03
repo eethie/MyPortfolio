@@ -1,7 +1,7 @@
 import outside1 from '../components/slider/about-images/IMG_8003.jpg'
 import outside2 from '../components/slider/about-images/IMG_7945.jpg'
 import outside3 from '../components/slider/about-images/IMG_5499.jpg'
-import video from '../assets/loseyourself.mp4'
+import video from '../assets/loseyourself.webm'
 
 import portrait from '../assets/portrait.jpg'
 import Slider from '../components/slider/slider.jsx'
@@ -62,7 +62,7 @@ function About() {
     <div className="about-page">
       <video autoPlay loop muted playsInline preload="auto"
         className="video">
-        <source src={video} type="video/mp4" />
+        <source src={video} type="video/webm" />
       </video>
       <div className = "crowd-parallax">
               <motion.div className="layer layer-back"
