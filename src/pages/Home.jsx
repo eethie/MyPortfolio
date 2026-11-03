@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import video from '../assets/aroundtheworld.webm'
+import video from '../assets/aroundtheworld.mp4'
 import crowd1 from '../assets/background-light.png'
 import crowd2 from '../assets/background-grey.png'
 import crowd3 from '../assets/background-black.png'
@@ -23,7 +23,7 @@ const frontY = useTransform(scrollY, y => -y * 0.4);
     <div className ="home-page">
       <video autoPlay loop muted playsInline
       preload="auto" className="video">
-        <source src={video} type="video/webm" />
+        <source src={video} type="video/mp4" />
       </video>
 
       <div className = "crowd-parallax">

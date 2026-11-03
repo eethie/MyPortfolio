@@ -112,7 +112,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -818,4 +818,64 @@ a:focus-visible, button:focus-visible { outline: 2px solid #ff6472; outline-offs
   .projects-container::before, .project-card::before { animation: none; }
   .project-card, .project-card::after { transition: none; }
   .nav-glow { transform: none !important; }
+}
+
+/* Keep background footage visible behind the crowd and page content. */
+main { isolation: isolate; }
+.video {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  height: 100vh;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+}
+.crowd-parallax {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
+}
+
+/* Crop the dark edges of the Projects footage within the viewport. */
+.projects-video-frame {
+  position: absolute !important;
+  inset: 0 0 auto;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0 !important;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+}
+.projects-video-frame .video {
+  left: -20%;
+  right: auto;
+  width: 140%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* Soft silver type stays legible over the concert footage. */
+.intro-text p,
+.about-content p,
+.outside-content p,
+.projects-container > p,
+.project-card p,
+.modal-card {
+  color: #dedee3;
+  font-weight: 350;
+  line-height: 1.85;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .65);
+}
+.header h1,
+.header h2,
+.header h3,
+.modal-card h2,
+.modal-card h4 {
+  color: #E31C2D;
+  line-height: 1.2;
+  text-shadow: none;
 }
