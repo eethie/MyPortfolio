@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
 import './slider.css';
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from "react-icons/io";
@@ -6,21 +6,6 @@ import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from "react-icons/i
 
 function CustomCarousel({ children }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [slideDone, setSlideDone] = useState(true);
-  const [timeID, setTimeID] = useState(null);
-
-  useEffect(() => {
-    if (slideDone) {
-      setSlideDone(false);
-      setTimeID(
-        setTimeout(() => {
-          slideNext();
-          setSlideDone(true);
-        }, 5000)
-      );
-    }
-  }, [slideDone]);
-
   const slideNext = () => {
     setActiveIndex((val) => {
       if (val >= children.length - 1) {
@@ -41,23 +26,10 @@ function CustomCarousel({ children }) {
     });
   };
 
-  const AutoPlayStop = () => {
-    if (timeID > 0) {
-      clearTimeout(timeID);
-      setSlideDone(false);
-    }
-  };
-
-  const AutoPlayStart = () => {
-    if (!slideDone) {
-      setSlideDone(true);
-    }
-  };
-
 return (
   <div className="slider-wrapper">
     <button
-      className="slider__btn-prev"
+      className="slider__btn-prev" aria-label="Previous photo"
       onClick={(e) => {
         e.preventDefault();
         slidePrev();
@@ -68,8 +40,8 @@ return (
 
     <div
       className="container__slider"
-      onMouseEnter={AutoPlayStop}
-      onMouseLeave={AutoPlayStart}
+
+
     >
       {children.map((item, index) => (
         <div
@@ -83,7 +55,7 @@ return (
       <div className="container__slider__links">
         {children.map((item, index) => (
           <button
-            key={index}
+            key={index} aria-label={`Show photo ${index + 1}`} aria-pressed={activeIndex === index}
             className={
               activeIndex === index
                 ? "container__slider__links-small container__slider__links-small-active"
@@ -99,7 +71,7 @@ return (
     </div>
 
     <button
-      className="slider__btn-next"
+      className="slider__btn-next" aria-label="Next photo"
       onClick={(e) => {
         e.preventDefault();
         slideNext();

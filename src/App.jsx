@@ -9,7 +9,7 @@ import Projects from './pages/Projects'
 import resume from './assets/ez_resume.pdf'
 
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import ScrollToTop from './ScrollToTop'
 import './App.css' 
@@ -26,19 +26,19 @@ function App() {
           transition={{ ease: "easeOut", delay: 0.8 }}
           >
           <div className="nav-links">
-          <NavLink to="/" end className="nav-link">Home</NavLink>
-          <NavLink to="/about" className="nav-link">About</NavLink>
-          <NavLink to="/projects" className="nav-link">Projects</NavLink>
+          <NavLink to="/" end className="nav-link">{({ isActive }) => <>{isActive && <motion.span className="nav-glow" layoutId="nav-glow" transition={{ type: "spring", stiffness: 380, damping: 30 }} />}<span className="nav-label">Home</span></>}</NavLink>
+          <NavLink to="/about" className="nav-link">{({ isActive }) => <>{isActive && <motion.span className="nav-glow" layoutId="nav-glow" transition={{ type: "spring", stiffness: 380, damping: 30 }} />}<span className="nav-label">About</span></>}</NavLink>
+          <NavLink to="/projects" className="nav-link">{({ isActive }) => <>{isActive && <motion.span className="nav-glow" layoutId="nav-glow" transition={{ type: "spring", stiffness: 380, damping: 30 }} />}<span className="nav-label">Projects</span></>}</NavLink>
           </div>
 
           <div className="nav-icons">
-            <a href="https://github.com/eethie" target="_blank" rel="noopener noreferrer">
+            <a aria-label="GitHub" href="https://github.com/eethie" target="_blank" rel="noopener noreferrer">
               <FaSquareGithub className="icon" />
             </a>
-            <a href="https://www.linkedin.com/in/ethanzzeng/" target="_blank" rel="noopener noreferrer">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/ethanzzeng/" target="_blank" rel="noopener noreferrer">
               <AiOutlineLinkedin className="icon" />
             </a>
-            <a href={resume} download="ez_resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a aria-label="Download résumé" href={resume} download="ez_resume.pdf" target="_blank" rel="noopener noreferrer">
               <HiIdentification className="icon" />
             </a>
           </div>

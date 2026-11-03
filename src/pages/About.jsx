@@ -1,11 +1,12 @@
+import outside1 from '../components/slider/about-images/IMG_8003.jpg'
+import outside2 from '../components/slider/about-images/IMG_7945.jpg'
+import outside3 from '../components/slider/about-images/IMG_5499.jpg'
 import video from '../assets/loseyourself.mp4'
 
 import portrait from '../assets/portrait.jpg'
 import Slider from '../components/slider/slider.jsx'
 import brothers from '../components/slider/about-images/brothers.jpg';
 import brothers2 from '../components/slider/about-images/brothers2.jpg';
-import girlfriend from '../components/slider/about-images/girlfriend.jpg';
-import girlfriend2 from '../components/slider/about-images/girlfriend2.jpg';
 import sister from '../components/slider/about-images/sister.jpg';
 import fishing from '../components/slider/about-images/fishing.jpg';
 import kh from '../components/slider/about-images/kh8.jpg';
@@ -31,11 +32,6 @@ const knighthacks = [
 
 ]
 
-const me = [
-  { imgURL: girlfriend, imgAlt: 'girlfriend' },
-  { imgURL: girlfriend2, imgAlt: 'girlfriend2' },
-  { imgURL: fishing, imgAlt: 'fishing' }
-];
 
 const family = [
   { imgURL: fam, imgAlt: 'fam' },
@@ -65,7 +61,7 @@ function About() {
   return (
     <div className="about-page">
       <video autoPlay loop muted playsInline preload="auto"
-        class="video"className="video">
+        className="video">
         <source src={video} type="video/mp4" />
       </video>
       <div className = "crowd-parallax">
@@ -163,18 +159,16 @@ function About() {
             <h3> Outside of school </h3>
           </div>
         <div className="outside-slider">
-            <Slider>
-              {me.map((image, index) => {
-              return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
-              })}
-            </Slider>
-          </div>
+          <Slider>
+            <img src={outside1} alt="Outside of school photo 1" />
+            <img src={outside2} alt="Outside of school photo 2" />
+            <img src={outside3} alt="Outside of school photo 3" />
+            <img src={fishing} alt="Ethan on a fishing trip" />
+          </Slider>
+        </div>
         <div className="outside-content">
             <p>
-              Outside of computer science, I enjoy spending time with my family and friends, exploring new places, and trying out new experiences.
-              I love finding new spots to eat and hanging out with my girlfriend.
-              When I'm not out and about, I still exercise my passion for video games, as well as movies and creating new things.
-              I’m grateful to be able to experience and appreciate these joys everyday. 
+              Away from my computer, I enjoy spending time with family and friends, exploring new places, and finding new spots to eat. Fishing gives me a chance to slow down and spend some time outside. On quieter days, you will usually find me playing video games, watching movies, or making something new. 
             </p>
           </div>
       </motion.div>
@@ -205,3 +199,4 @@ function About() {
 }
 
 export default About
+

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import video from '../assets/aroundtheworld.mp4'
 import crowd1 from '../assets/background-light.png'
 import crowd2 from '../assets/background-grey.png'
@@ -21,7 +22,7 @@ const frontY = useTransform(scrollY, y => -y * 0.4);
   return (
     <div className ="home-page">
       <video autoPlay loop muted playsInline
-      preload="auto" class="video"className="video">
+      preload="auto" className="video">
         <source src={video} type="video/mp4" />
       </video>
 
@@ -65,7 +66,7 @@ const frontY = useTransform(scrollY, y => -y * 0.4);
           <h1>WELCOME!</h1>
         </div>
       <p>Hi! I'm Ethan Zeng, an aspiring developer interested in making full stack applications. This is my personal portfolio where I showcase my projects and share a bit about myself.</p>
-      <p>I am still relatively new to all this but I'm excited to present my journey thus far. Feel free to explore my projects and learn more about me!</p>
+      <p>I am still relatively new to all this but I'm excited to present my journey thus far. Feel free to explore my projects and learn more about me!</p><div className="home-actions"><Link to="/projects">Explore my projects ↗</Link><Link to="/about">More about me</Link></div>
     </div>
   </motion.div>
 </div>
@@ -73,3 +74,4 @@ const frontY = useTransform(scrollY, y => -y * 0.4);
 }
 
 export default Home
+

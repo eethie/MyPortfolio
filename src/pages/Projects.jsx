@@ -14,6 +14,12 @@ import { useEffect} from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
 
 function Projects() {
+  const spotlight = (event) => {
+    if (event.pointerType === 'touch') return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty('--spot-x', `${event.clientX - bounds.left}px`);
+    event.currentTarget.style.setProperty('--spot-y', `${event.clientY - bounds.top}px`);
+  };
   const scrollY = useMotionValue(0);
   
     useEffect(() => {
@@ -30,7 +36,7 @@ function Projects() {
   return (
     <div className='projects-page'>
       <video autoPlay loop muted playsInline 
-      preload="auto" class="video" className="video">
+      preload="auto"  className="video">
         <source src={video} type="video/mp4" />
       </video>
       <div className = "crowd-parallax">
@@ -83,6 +89,7 @@ function Projects() {
         <div className="row-layout-projects">
           <motion.div 
           className="project-card"
+          onPointerMove={spotlight}
           onClick={() => setActiveProject("TruthMeter")}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
@@ -105,6 +112,7 @@ function Projects() {
 
           <motion.div 
           className="project-card"
+          onPointerMove={spotlight}
           onClick={() => setActiveProject("pngPal")}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
@@ -127,6 +135,7 @@ function Projects() {
 
           <motion.div 
           className="project-card"
+          onPointerMove={spotlight}
           onClick={() => setActiveProject("Portfolio")}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}>
