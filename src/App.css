@@ -879,3 +879,58 @@ main { isolation: isolate; }
   line-height: 1.2;
   text-shadow: none;
 }
+
+/* Align the portrait and biography as one balanced introduction. */
+.about-page .row-layout-item {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 2rem;
+  width: min(100%, 1100px);
+}
+.about-page .portrait-container {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+}
+.about-page .portrait-container .portrait {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 25px;
+}
+.about-page .about-container {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+}
+.about-page .about-content {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+.about-page .about-content h2 { margin: 0 0 1.25rem; }
+.about-page .about-content p { margin: 0; }
+@media (max-width: 760px) {
+  .about-page .row-layout-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    max-width: 600px;
+  }
+  .about-page .portrait-container {
+    max-width: 300px;
+    justify-self: center;
+  }
+  .about-page .portrait-container .portrait {
+    height: auto;
+    min-height: 0;
+  }
+}
